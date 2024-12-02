@@ -39,7 +39,7 @@ class TestLogintest():
 #    element = WebDriverWait(self.driver, 10).until(
 #      EC.element_to_be_clickable((By.CSS_SELECTOR, ".header_profilelogo__BYM7f"))
 #    )
-    element.click()
+#    element.click()
     self.driver.find_element(By.CSS_SELECTOR, ".header_menuoption__04OZF").click()
     self.driver.find_element(By.CSS_SELECTOR, ".header_profilelogo__BYM7f").click()
     element = self.driver.find_element(By.CSS_SELECTOR, ".header_menuoption__04OZF")
