@@ -34,8 +34,8 @@ class TestLogintest():
     self.driver.find_element(By.ID, "password").send_keys("changeme")
     time.sleep(2)
     self.driver.find_element(By.ID, "kc-login").click()
-    time.sleep(30)
-   self.driver.find_element(By.CSS_SELECTOR, ".header_profilelogo__BYM7f").click()
+    time.sleep(15)
+    self.driver.find_element(By.CSS_SELECTOR, ".header_profilelogo__BYM7f").click()
 #    element = WebDriverWait(self.driver, 10).until(
 #      EC.element_to_be_clickable((By.CSS_SELECTOR, ".header_profilelogo__BYM7f"))
 #    )
