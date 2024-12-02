@@ -22,9 +22,9 @@ class TestLogintest():
   
   def test_logintest(self):
     self.driver.get("http://10.1.41.82:8080/auth/realms/mda/protocol/openid-connect/auth?client_id=mda-access&redirect_uri=http%3A%2F%2F10.1.41.74%3A3011%2F&state=7932852f-ead4-4300-aa4f-4e96a70c7c51&response_mode=fragment&response_type=code&scope=openid&nonce=191a37eb-d10f-44f8-8e77-e59cf80fa756&code_challenge=GwaP5FRDTVrLqV1EYbJl3Wfna-QXgT24gBfGeS89Uk0&code_challenge_method=S256")
-    time.sleep(2)
+    time.sleep(10)
     self.driver.maximize_window()
-    time.sleep(3)
+    time.sleep(10)
     self.driver.find_element(By.ID, "username").click()
     time.sleep(2)
     self.driver.find_element(By.ID, "username").send_keys("mdaofficerlicensing@mail.com")
@@ -33,12 +33,12 @@ class TestLogintest():
     time.sleep(2)
     self.driver.find_element(By.ID, "password").send_keys("changeme")
     time.sleep(2)
-    self.driver.find_element(By.CSS_SELECTOR, "button").click()
+    self.driver.find_element(By.ID, "kc-login").click()
     time.sleep(30)
-#   self.driver.find_element(By.CSS_SELECTOR, ".header_profilelogo__BYM7f").click()
-    element = WebDriverWait(self.driver, 10).until(
-      EC.element_to_be_clickable((By.CSS_SELECTOR, ".header_profilelogo__BYM7f"))
-    )
+   self.driver.find_element(By.CSS_SELECTOR, ".header_profilelogo__BYM7f").click()
+#    element = WebDriverWait(self.driver, 10).until(
+#      EC.element_to_be_clickable((By.CSS_SELECTOR, ".header_profilelogo__BYM7f"))
+#    )
     element.click()
     self.driver.find_element(By.CSS_SELECTOR, ".header_menuoption__04OZF").click()
     self.driver.find_element(By.CSS_SELECTOR, ".header_profilelogo__BYM7f").click()
