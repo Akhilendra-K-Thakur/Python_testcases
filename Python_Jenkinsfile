@@ -7,10 +7,12 @@ pipeline {
         stage('Run All Selenium Tests') {
             steps {
                 sh '''
-		python3 -m venv myenv
-                source venv/bin/activate
-                pip install -r requirements.txt
-                pytest tests/ --browser=chrome 
+		bash -c "
+			python3 -m venv myenv
+                	source venv/bin/activate
+                	pip install -r requirements.txt
+                	pytest tests/ --browser=chrome
+		"
                 '''
             }
         }
