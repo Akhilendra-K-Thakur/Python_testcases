@@ -24,7 +24,7 @@ class TestLogintest():
     self.driver.quit()
   
   def test_logintest(self):
-    self.driver.get("http://172.25.16.20:8080/auth/realms/mda/protocol/openid-connect/auth?client_id=mda-access&redirect_uri=http%3A%2F%2F172.25.16.11%3A3011%2F&state=aeb101b9-969e-4167-9efe-86b3d4fac75b&response_mode=fragment&response_type=code&scope=openid&nonce=b92698ee-877b-42e5-9c28-0f0806db670a&code_challenge=qIfv_cvne7X0NAKthkMB_FNQveaFR5JoLfDw1-HDYsw&code_challenge_method=S256")
+    self.driver.get("http://10.1.41.82:8080/auth/realms/mda/protocol/openid-connect/auth?client_id=mda-access&redirect_uri=http%3A%2F%2F172.25.16.11%3A3011%2F&state=aeb101b9-969e-4167-9efe-86b3d4fac75b&response_mode=fragment&response_type=code&scope=openid&nonce=b92698ee-877b-42e5-9c28-0f0806db670a&code_challenge=qIfv_cvne7X0NAKthkMB_FNQveaFR5JoLfDw1-HDYsw&code_challenge_method=S256")
     self.driver.set_window_size(1296, 696)
     self.driver.find_element(By.ID, "username").click()
     self.driver.find_element(By.ID, "username").click()
