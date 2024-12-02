@@ -34,7 +34,11 @@ class TestLogintest():
     time.sleep(2)
     self.driver.find_element(By.CSS_SELECTOR, "button").click()
     time.sleep(15)
-    self.driver.find_element(By.CSS_SELECTOR, ".header_profilelogo__BYM7f").click()
+#   self.driver.find_element(By.CSS_SELECTOR, ".header_profilelogo__BYM7f").click()
+    element = WebDriverWait(self.driver, 10).until(
+      EC.element_to_be_clickable((By.CSS_SELECTOR, ".header_profilelogo__BYM7f"))
+    )
+    element.click()
     self.driver.find_element(By.CSS_SELECTOR, ".header_menuoption__04OZF").click()
     self.driver.find_element(By.CSS_SELECTOR, ".header_profilelogo__BYM7f").click()
     element = self.driver.find_element(By.CSS_SELECTOR, ".header_menuoption__04OZF")
