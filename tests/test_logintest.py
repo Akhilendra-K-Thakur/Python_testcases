@@ -11,6 +11,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.chrome.options import Options
 
+@pytest.mark.usefixtures("browser")
 class TestLogintest():
   def setup_method(self, method):
     options = Options()
