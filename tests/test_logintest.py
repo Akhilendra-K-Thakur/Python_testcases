@@ -28,7 +28,7 @@ class TestLogintest():
     self.driver.find_element(By.ID, "password").click()
     self.driver.find_element(By.ID, "password").send_keys("changeme")
     self.driver.find_element(By.CSS_SELECTOR, "button").click()
-    time.sleep(15)
+    time.sleep(30)
     self.driver.find_element(By.CSS_SELECTOR, ".header_profilelogo__BYM7f").click()
     self.driver.find_element(By.CSS_SELECTOR, ".header_menuoption__04OZF").click()
     self.driver.find_element(By.CSS_SELECTOR, ".header_profilelogo__BYM7f").click()
