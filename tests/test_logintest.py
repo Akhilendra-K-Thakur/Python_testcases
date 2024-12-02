@@ -13,13 +13,8 @@ from selenium.webdriver.chrome.options import Options
 
 @pytest.mark.usefixtures("browser")
 class TestLogintest():
-  def setup_method(self, method):
-    options = Options()
-    options.add_argument('--headless')  # Run headless
-    options.add_argument('--disable-gpu')
-    options.add_argument('--no-sandbox')
-    self.driver = webdriver.Chrome(options=options)
-    self.vars = {}
+  def pytest_addoption(parser):
+    parser.addoption("--browser", action="store", default="chrome", help="Browser type")
   
   def teardown_method(self, method):
     self.driver.quit()
