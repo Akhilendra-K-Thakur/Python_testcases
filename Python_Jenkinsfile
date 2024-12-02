@@ -9,7 +9,7 @@ pipeline {
                 sh '''
 		bash -c "
 			python3 -m venv myenv
-                	source venv/bin/activate
+                	source myenv/bin/activate
                 	pip install -r requirements.txt
                 	pytest tests/ --browser=chrome
 		"
