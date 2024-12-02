@@ -21,8 +21,9 @@ class TestLogintest():
   
   def test_logintest(self):
     self.driver.get("http://10.1.41.82:8080/auth/realms/mda/protocol/openid-connect/auth?client_id=mda-access&redirect_uri=http%3A%2F%2F10.1.41.74%3A3011%2F&state=7932852f-ead4-4300-aa4f-4e96a70c7c51&response_mode=fragment&response_type=code&scope=openid&nonce=191a37eb-d10f-44f8-8e77-e59cf80fa756&code_challenge=GwaP5FRDTVrLqV1EYbJl3Wfna-QXgT24gBfGeS89Uk0&code_challenge_method=S256")
-    driver.maximize_window()
-    time.sleep(5)
+    time.sleep(2)
+    self.driver.maximize_window()
+    time.sleep(3)
     self.driver.find_element(By.ID, "username").click()
     time.sleep(2)
     self.driver.find_element(By.ID, "username").send_keys("mdaofficerlicensing@mail.com")
